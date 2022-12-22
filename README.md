@@ -1,5 +1,5 @@
 # image_input_gym_env #
-For Gym environment, image processing as input is one way you working with AI Deep learning. We puspose a technical to work with refresh rates and we can including grids and image scalings and augmentation and significants the data input for costs efficients with tasks in application.
+For Gym environment, image processing as input is one way you work with AI Deep learning. We purpose a technical to work with refresh rates and we can include grids and image scalings and augmentation and significants the data input for cost efficients with tasks in the application.
 
 #### Problem: #### 
 👧💬 For problem study they using Pygame because it is easy for beginner and ready input data as messages but in some problem we using camera or images.
