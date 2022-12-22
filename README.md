@@ -89,6 +89,9 @@ if game_global_step >= 25 :
 ```
 
 ## Model ###
+
+We use the same model as we using in other games or image catagorize problem, that is working before modify and adjust is possible.
+
 ```
 model = tf.keras.models.Sequential([
 	tf.keras.layers.InputLayer(input_shape=INPUT_DIMS),
@@ -109,16 +112,24 @@ model = tf.keras.models.Sequential([
 model.summary()
 ```
 
-
 ## Result image ##
 
+Input image, from game input image ( 94 x 94 x 3 )
 
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/01.png?raw=true "Title")
 
+Data preparation as image ( 32 x 32, 2 ) 
+
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/78.png?raw=true "Title")
+
+Data preparation as image ( 32 x 32, 2 ) 
 
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/79.png?raw=true "Title")
 
+Data preparation as image ( 32 x 32, 2 ) 
+
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/80.png?raw=true "Title")
+
+Data preparation as image with position extraction.
 
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/Figure_1.png?raw=true "Title")
