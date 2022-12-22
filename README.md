@@ -3,10 +3,11 @@ For Gym environment, image processing as input is one way you working with AI De
 
 #### Problem: ####
 1. Input image is large and we need to reduce data input to speed up at the efforadable costs of the networks learning.
-2. Grayscales image or convolution image remove of our input detail such as the car colors, create the second path road in image reflecting from the main and information leave convolution layer with random image has detail. You need to apply Dense layer ```Dense(3)``` not only for colors but your AI not loss because conv need to hold some valye for next time update. Output = { information, gress background, gress background, gress background, information, gress background ... }
+2. Grayscales image or convolution image remove of our input detail such as the car colors, create the second path road in image reflecting from the main and information leave convolution layer with random image has detail. You need to apply Dense layer ```Dense(3)``` not only for colors but your AI not loss because conv need to hold some value for next time update. ``` Output = { information, gress background, gress background, gress background, information, gress background ... } ```
 
 #### Solutions: ####
 1. Image input reduce sizes that make game play with lower costs computation when significants information is remains.
+2. With single input output layer or model, add its results with previous results or use the residual networks.
 
 ## Gym game environment ##
 
