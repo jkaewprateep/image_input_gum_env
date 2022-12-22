@@ -23,6 +23,8 @@ observation, reward, done, info, prob = env.step([ -1.,  0.,  0. ])
 
 ## Random action ###
 
+After we observed the actions space we create possible actions inputs that possible to play the game player before we test programming running and allowed our AI to learn to play the game.
+
 ```
 def random_action ( ) :
 
