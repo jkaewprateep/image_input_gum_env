@@ -1,5 +1,11 @@
 # image_input_gym_env
-For Gym environment, image processing as input
+For Gym environment, image processing as input is one way you working with AI Deep learning.
+
+#### Problem: ####
+1. Input image is large and we need to reduce data input to speed up at the efforadable costs of the networks learning.
+
+#### Solutions: ####
+1. Image input reduce sizes that make game play with lower costs computation when significants information is remains.
 
 ## Gym game environment ##
 
