@@ -69,7 +69,8 @@ def update_DATA( image, action ):
     coff_7 = 1
     coff_8 = 1
 	
-    coeff_row = tf.constant( [ contrl, coff_0, coff_1, coff_2, coff_3, coff_4, coff_5, coff_6, coff_7, coff_8 ], shape=( 10, 1 ), dtype=tf.float32 )
+    coeff_row = tf.constant( [ contrl, coff_0, coff_1, coff_2, coff_3, coff_4, coff_5, 
+    			coff_6, coff_7, coff_8 ], shape=( 10, 1 ), dtype=tf.float32 )
     coeff_row = tf.concat([ coeff_row, tf.zeros([ 1014, 1 ], dtype=tf.float32) ], axis=0)
     coeff_row = tf.reshape( coeff_row, ( 32, 32, 1 ) )
 	
