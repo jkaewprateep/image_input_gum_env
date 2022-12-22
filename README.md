@@ -112,3 +112,5 @@ model.summary()
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/79.png?raw=true "Title")
 
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/80.png?raw=true "Title")
+
+![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/Figure_1.png?raw=true "Title")
