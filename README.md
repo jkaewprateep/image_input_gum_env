@@ -42,6 +42,8 @@ def random_action ( ) :
 
 ## Predict action ###
 
+This function is to create action from trained model and input as image and information in the same space as the ```env.action_space``` or ```[ -1.,  0.,  0. ]```
+
 ```
 def predict_action ( ) :
 
