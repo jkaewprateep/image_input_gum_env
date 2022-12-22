@@ -5,10 +5,12 @@ For Gym environment, image processing as input is one way you working with AI De
 1. Input image is large and we need to reduce data input to speed up at the efforadable costs of the networks learning.
 2. Grayscales image or convolution image remove of our input detail such as the car colors, create the second path road in image reflecting from the main and information leave convolution layer with random image has detail. You need to apply Dense layer ```Dense(3)``` not only for colors but your AI not loss because conv need to hold some value for next time update. ``` Output = { information, gress background, gress background, gress background, information, gress background ... } ```
 3. One problem of games AI or image camera AI is the input is in large variances, you need to do data-preparation input that is not too different.
+4. How to add input calculating information without mixed with the input image and easy handling⁉️
 
 #### Solutions: ####
 1. Image input reduce sizes that make game play with lower costs computation when significants information is remains.
 2. With a single input output layer or model, add its results with previous results or use the residual networks.
+3. When working with image and we need to add information into the dataset without repeating or lossless method we add by the side channels.
 
 ## Gym game environment ##
 
@@ -38,6 +40,52 @@ def random_action ( ) :
     # 3 breaks : [ 0.0, 0.0, 1.0 ]
 	
     return action
+```
+
+## Update dataset ##
+
+When working with image and we need to add information into the dataset without repeating or lossless method we add by the side channels.
+
+```
+def update_DATA( image, action ):
+    global reward
+    global step
+    global gamescores
+    global DATA
+    global LABEL
+	
+    step = step + 1
+	
+    contrl = step + ( 5 * reward )
+    coff_0 = 1
+    coff_1 = 1
+    coff_2 = 1
+    coff_3 = 1
+    coff_4 = 1
+    coff_5 = 1
+    coff_6 = 1
+    coff_7 = 1
+    coff_8 = 1
+	
+    coeff_row = tf.constant( [ contrl, coff_0, coff_1, coff_2, coff_3, coff_4, coff_5, coff_6, coff_7, coff_8 ], shape=( 10, 1 ), dtype=tf.float32 )
+    coeff_row = tf.concat([ coeff_row, tf.zeros([ 1014, 1 ], dtype=tf.float32) ], axis=0)
+    coeff_row = tf.reshape( coeff_row, ( 32, 32, 1 ) )
+	
+    image = tf.reshape( image, (32, 32, 1) )
+    coeff_row = tf.concat([ image, coeff_row ], axis=2 )
+	
+    DATA_row = tf.reshape( coeff_row, shape=(1, 1, 32, 32, 2) )
+	
+    DATA = tf.experimental.numpy.vstack([DATA, DATA_row])
+    DATA = DATA[-30:,:,:,:]
+	
+    LABEL = tf.experimental.numpy.vstack([LABEL, tf.constant(action, shape=(1, 1, 1, 1, 3))])
+    LABEL = LABEL[-30:,:,:,:]
+	
+    DATA = DATA[-30:,:,:,:]
+    LABEL = LABEL[-30:,:,:,:]
+	
+    return DATA, LABEL
 ```
 
 ## Predict action ###
