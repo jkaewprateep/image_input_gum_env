@@ -8,13 +8,15 @@ For Gym environment, image processing as input is one way you working with AI De
 
 #### Solutions: ####
 1. Image input reduce sizes that make game play with lower costs computation when significants information is remains.
-2. With single input output layer or model, add its results with previous results or use the residual networks.
+2. With a single input output layer or model, add its results with previous results or use the residual networks.
 
 ## Gym game environment ##
 
+The game environment, updated with info and prob in Gym 0.26.0 we are using and we observed the possible actions from ```env.action_space``` and create input to the game by ```env.step([ -1.,  0.,  0. ])```
+
 ```
 env = gym.make("CarRacing-v2", render_mode='human')
-outputs = env.action_space        # Box([-1.  0.  0.], 1.0, (3,), float32)
+outputs = env.action_space        					# Box([-1.  0.  0.], 1.0, (3,), float32)
 obs = env.reset()
 observation, reward, done, info, prob = env.step([ -1.,  0.,  0. ])	
 ```
