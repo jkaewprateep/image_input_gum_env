@@ -183,3 +183,7 @@ Data preparation as image ( 32 x 32, 2 )
 Data preparation as image with position extraction.
 
 ![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/Figure_1.png?raw=true "Title")
+
+Camera image position.
+
+![Alt text](https://github.com/jkaewprateep/image_input_gym_env/blob/main/camera_image_position.gif?raw=true "Title")
