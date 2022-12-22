@@ -42,7 +42,7 @@ def random_action ( ) :
 
 ## Predict action ###
 
-This function is to create action from trained model and input as image and information in the same space as the ```env.action_space``` or ```[ -1.,  0.,  0. ]```
+This function is to create action from trained model and input as image and information in the same space as the ```env.action_space``` , sample: ```[ -1.,  0.,  0. ]```
 
 ```
 def predict_action ( ) :
@@ -56,6 +56,8 @@ def predict_action ( ) :
 ```
 
 ## Generate image inpur as channel shifting information ##
+
+Image flashes input information, we add previous image to remains the information otherwise AI difficult to learn because information less than gress backgrounds that is property of conv networks we are working on residual networks of image augmentation.
 
 ```
 action = predict_action( )
