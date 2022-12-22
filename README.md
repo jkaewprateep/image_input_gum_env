@@ -1,7 +1,8 @@
-# image_input_gym_env
+# image_input_gym_env #
 For Gym environment, image processing as input is one way you working with AI Deep learning. We puspose a technical to work with refresh rates and we can including grids and image scalings and augmentation and significants the data input for costs efficients with tasks in application.
 
-#### Problem: ####
+#### Problem: #### 
+👧💬 For problem study they using Pygame because it easy for beginner and ready input data as messages but in some problem we using camera or images.
 1. Input image is large and we need to reduce data input to speed up at the efforadable costs of the networks learning.
 2. Grayscales image or convolution image remove of our input detail such as the car colors, create the second path road in image reflecting from the main and information leave convolution layer with random image has detail. You need to apply Dense layer ```Dense(3)``` not only for colors but your AI not loss because conv need to hold some value for next time update. ``` Output = { information, gress background, gress background, gress background, information, gress background ... } ```
 3. One problem of games AI or image camera AI is the input is in large variances, you need to do data-preparation input that is not too different.
