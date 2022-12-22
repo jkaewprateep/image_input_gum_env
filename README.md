@@ -162,6 +162,18 @@ model = tf.keras.models.Sequential([
 model.summary()
 ```
 
+## Files and Directory ##
+
+| File name  | Description |
+| ------------- | ------------- |
+| 01.png  | sample input image  |
+| 78.png  | sample output image 1  |
+| 79.png  | sample output image 2  |
+| 80.png  | sample output image 3  |
+| Figure_1.png  | sample output image person  |
+| camera_image_position.gif  | sample camera image positioning  |
+| README.md  | readme file  |
+
 ## Result image ##
 
 Input image, from game input image ( 94 x 94 x 3 )
